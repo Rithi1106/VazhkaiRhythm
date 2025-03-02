@@ -14,7 +14,7 @@ def habit_tracker(input):
             )
 
         completion = client.chat.completions.create(
-        model="deepseek/deepseek-r1:free",
+        model="mistralai/mistral-small-24b-instruct-2501:free",
         messages=[
             {
             "role": "user",
@@ -23,7 +23,8 @@ def habit_tracker(input):
         ]
         )
         print(completion)
-        # print(completion.choices[0].message.content)
+        print("--------------------------")
+        print(completion.choices[0].message.content)
     except Exception as e:
         raise(e)
 
@@ -91,7 +92,6 @@ prompt = f"""
                         }}
                     }}
                 }}
-
         """
 
 
