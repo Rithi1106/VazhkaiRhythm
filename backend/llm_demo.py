@@ -22,11 +22,15 @@ def habit_tracker(input):
             }
         ]
         )
-        print(completion)
-        print("--------------------------")
-        print(completion.choices[0].message.content)
+
+        return(completion.choices[0].message.content)
     except Exception as e:
         raise(e)
+    
+
+def parse_ouput(llm_output):
+    """llm_output, parse list of json, and have it in csv file"""
+    return
 
 
 input = """
@@ -96,4 +100,4 @@ prompt = f"""
 
 
 
-habit_tracker(prompt)
+llm_output = habit_tracker(prompt)
