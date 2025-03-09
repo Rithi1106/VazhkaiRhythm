@@ -30,6 +30,9 @@ def habit_tracker(input):
 
 def parse_ouput(llm_output):
     """llm_output, parse list of json, and have it in csv file"""
+    """columns: category, from, to,   am/pm"""
+    """           sleep,   6.00, 6.30, am"""
+    """wellness-physical,   6.30, 7.00, am"""
     return
 
 
@@ -100,4 +103,201 @@ prompt = f"""
 
 
 
-llm_output = habit_tracker(prompt)
+# llm_output = habit_tracker(prompt)
+llm_output = """json
+[
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "6:00",
+                    "to": "6:30"
+                },
+                "ampm": "AM",
+                "category": "sleep"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "6:30",
+                    "to": "7:00"
+                },
+                "ampm": "AM",
+                "category": "wellness-physical"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "7:00",
+                    "to": "7:30"
+                },
+                "ampm": "AM",
+                "category": "wellness-physical"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "7:30",
+                    "to": "8:00"
+                },
+                "ampm": "AM",
+                "category": "food"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "8:00",
+                    "to": "8:30"
+                },
+                "ampm": "AM",
+                "category": "work"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "8:30",
+                    "to": "12:30"
+                },
+                "ampm": "AM",
+                "category": "work"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "12:30",
+                    "to": "1:30"
+                },
+                "ampm": "PM",
+                "category": "food"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "1:30",
+                    "to": "4:00"
+                },
+                "ampm": "PM",
+                "category": "work"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "4:00",
+                    "to": "4:30"
+                },
+                "ampm": "PM",
+                "category": "recreation"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "4:30",
+                    "to": "6:30"
+                },
+                "ampm": "PM",
+                "category": "work"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "6:30",
+                    "to": "7:30"
+                },
+                "ampm": "PM",
+                "category": "wellness-physical"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "7:30",
+                    "to": "8:00"
+                },
+                "ampm": "PM",
+                "category": "wellness-physical"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "8:00",
+                    "to": "8:30"
+                },
+                "ampm": "PM",
+                "category": "food"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "8:30",
+                    "to": "10:00"
+                },
+                "ampm": "PM",
+                "category": "recreation"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "10:00",
+                    "to": "10:30"
+                },
+                "ampm": "PM",
+                "category": "wellness-mental"
+            }
+        }
+    },
+    {
+        "output": {
+            "activity": {
+                "time": {
+                    "from": "10:30",
+                    "to": "6:00"
+                },
+                "ampm": "next day",
+                "category": "sleep"
+            }
+        }
+    }
+]
+"""
+parse_ouput(llm_output)
