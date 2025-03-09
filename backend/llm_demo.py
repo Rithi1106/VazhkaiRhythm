@@ -101,7 +101,7 @@ prompt = f"""
                 }}
         """
 
-
+print(llm_output)
 
 # llm_output = habit_tracker(prompt)
 llm_output = """json
@@ -300,4 +300,5 @@ llm_output = """json
     }
 ]
 """
+print(llm_output)
 parse_ouput(llm_output)
