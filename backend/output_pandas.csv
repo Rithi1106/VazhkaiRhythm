@@ -1,0 +1,17 @@
+from,to,ampm,category
+6:00,6:30,AM,sleep
+6:30,7:00,AM,wellness-physical
+7:00,7:30,AM,wellness-physical
+7:30,8:00,AM,food
+8:00,8:30,AM,work
+8:30,12:30,AM,work
+12:30,1:30,PM,food
+1:30,4:00,PM,work
+4:00,4:30,PM,recreation
+4:30,6:30,PM,work
+6:30,7:30,PM,wellness-physical
+7:30,8:00,PM,wellness-physical
+8:00,8:30,PM,food
+8:30,10:00,PM,recreation
+10:00,10:30,PM,wellness-mental
+10:30,6:00,next day,sleep
